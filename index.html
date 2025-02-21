@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Data Visualization Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="login-container" id="loginContainer">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="dashboard" id="dashboard" style="display: none;">
+        <header>
+            <h1>Data Visualization Dashboard</h1>
+            <button id="logout">Logout</button>
+        </header>
+
+        <div class="filters">
+            <label for="ageFilter">Age:</label>
+            <select id="ageFilter">
+                <option value="15-25">15-25</option>
+                <option value=">25">>25</option>
+            </select>
+
+            <label for="genderFilter">Gender:</label>
+            <select id="genderFilter">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="dateFilter">Date:</label>
+            <input type="date" id="dateFilter">
+            <button id="applyFilters">Apply Filters</button>
+        </div>
+
+        <div class="charts">
+            <canvas id="barChart"></canvas>
+            <canvas id="lineChart"></canvas>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
+

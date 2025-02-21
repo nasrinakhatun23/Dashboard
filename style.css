@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #007bff;
+    color: white;
+}
+
+.filters, .charts {
+    padding: 1em;
+    margin: 1em;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters label {
+    margin-right: 0.5em;
+}
+
+.charts canvas {
+    margin: 1em 0;
+    max-width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.login-container input {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+
+/* For tablets and medium screens */
+@media (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .filters, .charts {
+        margin: 0.5em;
+        padding: 1em;
+    }
+    
+    .charts canvas {
+        max-width: 90%;
+    }
+
+    button {
+        padding: 0.4em 0.8em;
+        font-size: 0.9rem;
+    }
+}
+
+/* For small tablets and larger phones  */
+@media (max-width: 768px) {
+    .filters, .charts {
+        padding: 0.8em;
+        margin: 0.5em 0;
+    }
+
+    .filters label {
+        margin-right: 0.3em;
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+        padding: 0.4em;
+    }
+
+    .login-container input {
+        width: 100%; 
+    }
+}
+
+/* For small phones */
+@media (max-width: 480px) {
+    header {
+        padding: 0.5em;
+        font-size: 1rem;
+    }
+
+    .filters, .charts {
+        margin: 0.5em 0;
+        padding: 0.8em;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 0.3em;
+    }
+
+    .login-container input {
+        width: 90%;
+        padding: 0.4em;
+    }
+
+    .charts canvas {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
